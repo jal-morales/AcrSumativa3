@@ -1,17 +1,11 @@
-# Usa la imagen oficial de MySQL
-FROM mysql:8.0
+# Usa una imagen base oficial de Nginx
+FROM nginx:latest
 
-# Establece las variables de entorno para configurar la base de datos
-ENV MYSQL_ROOT_PASSWORD=Password123
-ENV MYSQL_DATABASE=my_database
-ENV MYSQL_USER=mysqluser
-ENV MYSQL_PASSWORD=Password123
+# Copia el archivo de configuración de Nginx al contenedor
+COPY default.conf /etc/nginx/conf.d/default.conf
 
-# Copia el script SQL de inicialización
-COPY init.sql /docker-entrypoint-initdb.d/
+# Copia el contenido de la aplicación (por ejemplo, archivos HTML) al directorio donde Nginx los servirá
+COPY ./html /usr/share/nginx/html
 
-# Exponer el puerto 3306 para la conexión MySQL
-EXPOSE 3306
-
-# Comando por defecto para iniciar MySQL
-CMD ["mysqld"]
+# Exponer el puerto en el que Nginx está escuchando
+EXPOSE 80
