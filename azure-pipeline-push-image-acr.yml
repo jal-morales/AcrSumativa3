@@ -5,8 +5,8 @@ trigger:
 
 variables:
   # Variables de entorno
-  ACR_NAME: 'myappdevops8' # Colocar el nombre de tu ACR
-  IMAGE_NAME: 'my-docker-mysql8' # Colocar el Nombre de Imagen
+  ACR_NAME: 'contenedorsumativa3' # Colocar el nombre de tu ACR
+  IMAGE_NAME: 'contenedorimagen' # Colocar el Nombre de Imagen
   SERVICE_CONNECTION_NAME: 'myapp-devops' # Colocar nombre del Service Connection ubicado en Docker Registry-- Azure Container Registry
 
 jobs:
