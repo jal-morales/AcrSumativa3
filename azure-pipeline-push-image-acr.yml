@@ -5,7 +5,7 @@ trigger:
 
 variables:
   # Variables de entorno
-  ACR_NAME: 'ContenedorSumativa3' # Colocar el nombre de tu ACR
+  ACR_NAME: 'ContenedorSumativa3' # Colocar el nombre de tu ACR 
   IMAGE_NAME: 'myapp-nginx-s4' # Colocar el Nombre de Imagen
   SERVICE_CONNECTION_NAME: 'myapp-devops' # Colocar nombre del Service Connection ubicado en Docker Registry-- Azure Container Registry
 
